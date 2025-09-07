@@ -1,5 +1,5 @@
 import { BaseRepo, uuidv4 } from 'ngx-toolkit/http-mock';
-import { DocumentModel } from '../../models/document.model';
+import { DocumentModel } from '../../../models/document.model';
 
 export class DocumentsRepo extends BaseRepo<DocumentModel> {
   constructor(table: DocumentModel[]) {

@@ -1,8 +1,8 @@
 import { MockRegistry, InMemoryDB } from 'ngx-toolkit/http-mock';
 import { documentsMock } from './data/documents.mock';
 import { DocumentModel } from '../../models/document.model';
-import { DocumentsRepo } from './documents.repo';
-import { DocumentsController } from './documents.controller';
+import { DocumentsRepo } from './repos/documents.repo';
+import { DocumentsController } from './controllers/documents.controller';
 
 export type Tables = { documents: DocumentModel[] };
 

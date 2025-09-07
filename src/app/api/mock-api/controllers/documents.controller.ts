@@ -7,8 +7,8 @@ import {
   notFound,
   ok,
 } from 'ngx-toolkit/http-mock';
-import { DocumentModel } from '../../models/document.model';
-import { DocumentsRepo } from './documents.repo';
+import { DocumentModel } from '../../../models/document.model';
+import { DocumentsRepo } from '../repos/documents.repo';
 
 export class DocumentsController extends CrudController<DocumentModel> {
   constructor(repo: DocumentsRepo) {
