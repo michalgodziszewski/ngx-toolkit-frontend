@@ -1,0 +1,36 @@
+<div class="grid">
+  <div class="col-12">
+    <button mat-flat-button (click)="addNewDocument()">Dodaj nowy</button>
+  </div>
+  <div class="col-12 md:col-6 lg:col-4">
+    <mat-form-field class="w-full">
+      <mat-label>Wybierz typ</mat-label>
+      <mat-select [(ngModel)]="documentType" (ngModelChange)="changeFilters()">
+        <mat-option [value]="''">Wszystkie</mat-option>
+        <mat-option [value]="'Contract'">Contract</mat-option>
+        <mat-option [value]="'Manual'">Manual</mat-option>
+        <mat-option [value]="'Faq'">FAQ</mat-option>
+        <mat-option [value]="'GCI'">Owu</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-12 md:col-6 lg:col-4">
+    <mat-form-field class="w-full">
+      <mat-label>Wybierz pakiet</mat-label>
+      <mat-select [(ngModel)]="packageType" (ngModelChange)="changeFilters()">
+        <mat-option [value]="''">Wszystkie</mat-option>
+        <mat-option [value]="'Rent+'">Rent+</mat-option>
+        <mat-option [value]="'ForFriends'">ForFriends</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<app-documents-list [documents]="documents()" (documentRemoved)="removeDocument($event)"></app-documents-list>
+<mat-paginator
+   [length]="rowCount()"
+   [pageSize]="pageSize()"
+   [pageSizeOptions]="[5, 10, 25, 50]"
+   [pageIndex]="pageNumber() -1"
+   (page)="changePage($event)"
+>
+</mat-paginator>
