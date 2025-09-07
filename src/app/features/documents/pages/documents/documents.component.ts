@@ -6,9 +6,9 @@ import { DocumentModel } from '../../../../models/document.model';
 import { DocumentsListComponent } from '../../components/documents-list/documents-list.component';
 import { FormsModule } from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
-import { uuidv4 } from '../../../../api/mock-api/utils/mock-utils';
 import { HttpErrorResponse } from '@angular/common/http';
 import { SnackbarService } from '../../../../services/snackbar.service';
+import { uuidv4 } from 'ngx-toolkit/http-mock';
 
 @Component({
   selector: 'app-documents',

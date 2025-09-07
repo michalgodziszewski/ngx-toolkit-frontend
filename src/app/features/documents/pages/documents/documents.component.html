@@ -25,12 +25,15 @@
     </mat-form-field>
   </div>
 </div>
-<app-documents-list [documents]="documents()" (documentRemoved)="removeDocument($event)"></app-documents-list>
+<app-documents-list
+  [documents]="documents()"
+  (documentRemoved)="removeDocument($event)"
+></app-documents-list>
 <mat-paginator
-   [length]="rowCount()"
-   [pageSize]="pageSize()"
-   [pageSizeOptions]="[5, 10, 25, 50]"
-   [pageIndex]="pageNumber() -1"
-   (page)="changePage($event)"
+  [length]="rowCount()"
+  [pageSize]="pageSize()"
+  [pageSizeOptions]="[5, 10, 25, 50]"
+  [pageIndex]="pageNumber() - 1"
+  (page)="changePage($event)"
 >
 </mat-paginator>
